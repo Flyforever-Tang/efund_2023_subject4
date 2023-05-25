@@ -1,0 +1,28 @@
+{
+	"DaskClient": {
+		"SchedulerAddress": "127.0.0.1:8786"
+	},
+	"Task": {
+		"DefaultCallbackMode": "MQ"
+	},
+	"FlaskApp": {
+		"Port": 5000,
+		"StaticFolder": "./",
+		"JsonAsAscii": false,
+		"SocketioNamespace": "/task"
+	},
+	"Persistence": {
+		"Type": "MySQLPersistence",
+		"SaveFolder": "./tasks",
+		"Host": "localhost",
+		"User": "root",
+		"Password": "123456",
+		"Database": "efund",
+		"Table": "Task",
+		"PrimaryKey": "Task_key"
+	},
+	"RedisMQ": {
+		"SleepTime": 0.001,
+		"IgnoreSubscribeMessages": true
+	}
+}
